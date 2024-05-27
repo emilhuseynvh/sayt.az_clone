@@ -234,8 +234,7 @@ function logo(){
 let son = 0
 function calc() {
     commonCommon.innerHTML = ''
-    console.log((sumLogo - -sumElectron - -sumSearch - -(pageInput.value *100 * designInput.value) - -statikLast) - 400);
-    if(((sumLogo - -sumElectron - -sumSearch - -(pageInput.value *100 * designInput.value) - -statikLast) - 400) > 450)  son = (sumLogo - -sumElectron - -sumSearch - -(pageInput.value *100 * designInput.value) - -statikLast) - 400
+    if(((sumLogo - -sumElectron - -sumSearch - -(pageInput.value *100 * designInput.value) - -statikLast)) > 450)  son = (sumLogo - -sumElectron - -sumSearch - -(pageInput.value *100 * designInput.value) - -statikLast)
     else son = 450
     commonCommon.innerHTML = ' ₼ ' + son
 }
