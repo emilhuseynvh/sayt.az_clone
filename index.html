@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayt.az</title>
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="overflow-x-hidden">
+    <header>
+        <nav class="flex justify-between w-[100%] px-[10px] py-[20px] bg-[#fff] z-[8] fixed top-0">
+            <img src="img/saytaz.svg" alt="logo">
+            <ul class="hidden lg:flex lg:gap-x-6 2xl:gap-x-15 items-center">
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-[#A271F2]">Sayt Yarat</li>
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-mainLightPurpleHover">Veb Sayt</li>
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-mainLightPurpleHover">Domen</li>
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-mainLightPurpleHover">Hostinq</li>
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-mainLightPurpleHover">Şirkət</li>
+              <li class="text-base text-[1rem]  font-manrope font-semibold flex justify-center items-center gap-[3px] relative cursor-pointer hover:text-mainLightPurpleHover">Xidmətlər</li>
+            </ul>
+            <div class="flex w-[30%] justify-end  items-center">
+                <div class="flex items-center">
+                    <p class="px-[15px] text-[#300B60] text-[22px] font-bold">₼</p>
+                    <i class="fa-solid fa-chevron-down text-[10px] pr-[10px]"></i>
+                </div>
+                <div class="flex items-center">
+                    <img class="w-[25px] object-contain" src="img/az.webp" alt="">
+                    <i class="fa-solid fa-chevron-down px-[15px] text-[10px]"></i>
+                </div>
+                <i onclick="ham(true)" class="fa-solid fa-bars text-[18px] font-light xl:invisible"></i>
+                <div class="hidden gap-[20px] xl:flex">
+                  <button style="background: linear-gradient(90deg, #7028e4, #e5b2ca);"
+                      class="text-[#fff] whitespace-nowrap font-bold text-center py-[.56rem] px-[1.5rem] rounded-[8px]">Qiymət Təklifi
+                      Al</button>
+                  <button style="color: rgb(162, 113, 242); border: 1px solid rgb(162, 113, 242);"
+                      class=" font-bold whitespace-nowrap text-center py-[.56rem] px-[1.5rem] rounded-[8px]">Daxil olun</button>
+              </div>
+            </div>
+        </nav>
+        <!-- Hamburger Menu -->
+        <div style=" box-shadow: 4px 0 6px rgba(0, 0, 0, 0.1), 1px 0 3px rgba(0, 0, 0, 0.08)"  id="hamburger-menu"
+            class="z-[9] w-[70vw] pt-[30px] px-[25px] translate-x-[300%] fixed right-0 top-[0px] bg-[#fff] h-[100vh] duration-[.5s]">
+            <i onclick="ham(false)" class="fa-solid fa-x float-right"></i>
+            <ul id="hamburger-ul">
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Sayt Yarat</li>
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Veb sayt </li>
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Domen </li>
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Hosting</li>
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Şirkət</li>
+                <li
+                    class="mr-[2px] whitespace-nowrap font-bold hover:bg-gray-50 cursor-pointer rounded-lg px-[20px] py-[10px]">
+                    Xidmətlər</li>
+            </ul>
+            <div class="my-[40px] flex gap-[30px] mr-[2px]">
+                <div class="flex items-center">
+                    <p class="px-[15px] text-[#300B60] text-[22px] font-bold">₼</p>
+                    <i class="fa-solid fa-chevron-down text-[10px]"></i>
+                </div>
+                <div class="flex items-center">
+                    <img class="w-[25px] object-contain" src="img/az.webp" alt="">
+                    <i class="fa-solid fa-chevron-down px-[15px] text-[10px]"></i>
+                </div>
+            </div>
+            <div class="flex flex-col gap-[20px]">
+                <button style="background: linear-gradient(90deg, #7028e4, #e5b2ca);"
+                    class="text-[#fff] font-bold text-center py-[.56rem] px-[1.5rem] rounded-[8px]">Qiymət Təklifi
+                    Al</button>
+                <button style="color: rgb(162, 113, 242); border: 1px solid rgb(162, 113, 242);"
+                    class=" font-bold text-center py-[.56rem] px-[1.5rem] rounded-[8px]">Daxil olun</button>
+            </div>
+        </div>
+    </header>
+    <main class="md:w-[80%] w-[100%] mx-auto mt-4 bg-[#f5f5f5]">
+        <div class="container mt-[100px] flex lg:flex-row flex-col md:gap-6 gap-2 pb-12  px-2 py-6">
+            <div class="lg:w-2/3 w-full bg-white p-4">
+              <p class="font-bold text-[3rem] mt-4 mb-12 ">Qiymət Təklifi Al</p>
+            <p class="font-medium text-[#212529]">Statik səhifələr</p>
+            <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
+                <div class="px-[15px] pt-[30px]">
+                    <p class="mb-4">Neçə statik səhifə olacaq?</p>
+                    <div class="flex items-center">
+                        <span style="background: rgb(162, 113, 242);"
+                            class=" mr-2 text-[.875rem] text-sm rounded-[.375rem] flex justify-center items-center w-6 h-6 text-[#fff]">1</span>
+                        <input oninput="page()"
+                           id="page-input" class="accent-[#a271f2] w-[90%] appearance-none cursor-pointer rounded-lg bg-gray-200 h-2"
+                            step="1" max="20" min="1" value="4" type="range">
+                        <span style="background: rgb(162, 113, 242);"
+                            class=" ml-2 text-[.875rem] text-sm rounded-[.375rem] flex justify-center items-center w-6 h-6 text-[#fff]">20</span>
+                    </div>
+                    <p class="mb-4 mt-8">Dizayn mürəkkəblik :</p>
+                    <div>
+                        <div class="flex justify-between">
+                            <span>Sadə</span>
+                            <span>Orta</span>
+                            <span>Xüsusi</span>
+                        </div>
+                        <input oninput="page()"
+                           id="design-input" class="accent-[#a271f2] w-[100%] appearance-none cursor-pointer rounded-lg bg-gray-200 h-2"
+                            step="1" min="1" max="3" value="1" type="range">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4 py-5 px-4 bg-[#4a84bf26]">
+                    <p class="text-[#285a70]">Xərc :</p>
+                    <p id="xerc-first" style="color: rgb(162, 113, 242); " class="sm:text-[22px] font-semibold">4 səhifə / ₼ 400</p>
+                </div>
+
+            </div>
+            <!-- VEB SAYTLARIN ELAVESI -->
+            <!-- SECTION 2 -->
+            <p class="text-[#212529] font-medium mt-[40px]">Veb sayt əlavələri</p>
+            <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
+                <div class="md:flex justify-between">
+                  <ul class="px-[15px] pt-[30px] pb-[10px] md:w-[50%] flex flex-col gap-[15px]">
+                    <!-- CHECKBOX -->
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Bloq</span>
+                        <div id="checkbox-element" onclick="checkbox(0, 'Bloq')" class="relative inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2] duration-500">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full  duration- peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                      
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Üzv girişi /‍‍‍ Profillər</span>
+                        <div id="checkbox-element" onclick="checkbox(1, 'Üzv girişi /‍‍‍ Profillər')" class="relative inline-block w-11 h-6 duration-500 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                      
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Responsive</span>
+                        <div id="checkbox-element" onclick="checkbox(2, 'Responsive')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Forum</span>
+                        <div id="checkbox-element" onclick="checkbox(3, 'Forum')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                   
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Canlı Söhbət</span>
+                        <div id="checkbox-element" onclick="checkbox(4, 'Canlı Söhbət')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Qalereya</span>
+                        <div id="checkbox-element" onclick="checkbox(5, 'Qalereya')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Əlaqə Forması</span>
+                        <div id="checkbox-element" onclick="checkbox(6, 'Əlaqə Forması')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                </ul>
+                <ul class="px-[15px] pb-[30px] md:pt-[30px] md:w-[50%] flex flex-col gap-[15px]">
+                    <!-- CHECKBOX -->
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Mesajlaşma</span>
+                        <div id="checkbox-element" onclick="checkbox(7, 'Mesajlaşma')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full  duration- peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                      
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Saytda Axtarış</span>
+                        <div id="checkbox-element" onclick="checkbox(8, 'Saytda Axtarış')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                      
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Xəritə Məlumatı / Geolocation</span>
+                        <div id="checkbox-element" onclick="checkbox(9, 'Xəritə Məlumatı / Geolocation')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Rezervasyon</span>
+                        <div id="checkbox-element" onclick="checkbox(10, 'Rezervasyon')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                   
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Rezervasyon</span>
+                        <div id="checkbox-element" onclick="checkbox(11, 'Rezervasyon')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Sosial Media inteqrasiyası</span>
+                        <div id="checkbox-element" onclick="checkbox(12, 'Sosial Media inteqrasiyası')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Analitika / İzləmə</span>
+                        <div id="checkbox-element" onclick="checkbox(13, 'Analitika / İzləmə')" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                </ul>
+                </div>
+                <div class="flex justify-between items-center mt-4 py-5 px-4 bg-[#4a84bf26]">
+                    <p class="text-[#285a70]">Xərc :</p>
+                    <p id="statik" style="color: rgb(162, 113, 242); " class="sm:text-[22px] font-semibold"> ₼ 0</p>
+                </div>
+                <!-- Axtarış motorunun optimallaşdırılması -->
+                <!-- SECTION 3 -->
+            </div>
+            <p class="text-[#212529] font-medium mt-[40px]">Axtarış motorunun optimallaşdırılması</p>
+            <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden  flex flex-col">
+                <div id="xercc" class="flex flex-row lg:flex-row px-[15px] py-[30px]">
+                  <ul class="flex flex-col gap-4 lg:w-[50%]">
+                    <li class="flex items-center">
+                      <div>
+                        <label onclick="checkFunc(0)" for="Başlıqlar &  Meta" data-ripple-dark="true" class="relative flex items-center mr-2 rounded-full cursor-pointer">
+                          <input id="Başlıqlar &  Meta" type="checkbox" class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-400 transition-all duration-500 before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#A271F2] checked:bg-[#A271F2] checked:before:bg-[#A271F2] hover:before:opacity-40" name="Başlıqlar &  Meta">
+                          <div class="absolute text-[#fff] transition-opacity opacity-0 pointer-events-none top-2/4 left-[10px] -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                          </div>
+                        </label>
+                      </div>
+                      <span>Başlıqlar &  Meta</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div>
+                        <label onclick="checkFunc(1)" for="Açar söz" data-ripple-dark="true" class="relative flex items-center mr-2 rounded-full cursor-pointer">
+                          <input id="Açar söz" type="checkbox" class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-400 transition-all duration-500 before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#A271F2] checked:bg-[#A271F2] checked:before:bg-[#A271F2] hover:before:opacity-40" name="Başlıqlar &  Meta">
+                          <div class="absolute text-[#fff] transition-opacity opacity-0 pointer-events-none top-2/4 left-[10px] -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                          </div>
+                        </label>
+                      </div>
+                      <span>Açar söz</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div>
+                        <label onclick="checkFunc(2)" for="+20 Qabaqcıl Texnika" data-ripple-dark="true" class="relative flex items-center mr-2 rounded-full cursor-pointer">
+                          <input id="+20 Qabaqcıl Texnika" type="checkbox" class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-400 transition-all duration-500 before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#A271F2] checked:bg-[#A271F2] checked:before:bg-[#A271F2] hover:before:opacity-40" name="Başlıqlar &  Meta">
+                          <div class="absolute text-[#fff] transition-opacity opacity-0 pointer-events-none top-2/4 left-[10px] -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                          </div>
+                        </label>
+                      </div>
+                      <span>+20 Qabaqcıl Texnika</span>
+                    </li>
+                  </ul>
+                  <ul class="flex flex-col gap-4 mt-4 lg:mt-0 lg:w-[50%]">
+                    <li class="flex items-center">
+                      <div>
+                        <label onclick="checkFunc(3)" for="Başlıq Teqləri" data-ripple-dark="true" class="relative flex items-center mr-2 rounded-full cursor-pointer">
+                          <input id="Başlıq Teqləri" type="checkbox" class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-400 transition-all duration-500 before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#A271F2] checked:bg-[#A271F2] checked:before:bg-[#A271F2] hover:before:opacity-40" name="Başlıqlar &  Meta">
+                          <div class="absolute text-[#fff] transition-opacity opacity-0 pointer-events-none top-2/4 left-[10px] -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                          </div>
+                        </label>
+                      </div>
+                      <span>Başlıq Teqləri</span>
+                    </li>
+                    <li class="flex items-center">
+                      <div>
+                        <label onclick="checkFunc(4)" for="Sitemap" data-ripple-dark="true" class="relative flex items-center mr-2 rounded-full cursor-pointer">
+                          <input id="Sitemap" type="checkbox" class="before:content[''] peer relative h-5 w-5 cursor-pointer appearance-none rounded-md border border-gray-400 transition-all duration-500 before:absolute before:top-2/4 before:left-2/4 before:block before:h-8 before:w-8 before:-translate-y-2/4 before:-translate-x-2/4 before:rounded-full before:bg-blue-gray-500 before:opacity-0 before:transition-opacity checked:border-[#A271F2] checked:bg-[#A271F2] checked:before:bg-[#A271F2] hover:before:opacity-40" name="Başlıqlar &  Meta">
+                          <div class="absolute text-[#fff] transition-opacity opacity-0 pointer-events-none top-2/4 left-[10px] -translate-y-2/4 -translate-x-2/4 peer-checked:opacity-100">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5" viewBox="0 0 20 20" fill="currentColor" stroke="currentColor" stroke-width="1"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"></path></svg>
+                          </div>
+                        </label>
+                      </div>
+                      <span>Sitemap</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="flex justify-between items-center mt-4 py-5 px-4 bg-[#4a84bf26]">
+                  <p class="text-[#285a70]">Xərc :</p>
+                  <p id="xerc-sec" style="color: rgb(162, 113, 242); " class="sm:text-[22px] font-semibold"> ₼ 0</p>
+              </div>
+            </div>
+            <!-- SECTION 4 -->
+            <!-- Elektron ticarət əlavələri -->
+            <p class="text-[#212529] font-medium mt-[40px]">Elektron ticarət əlavələri</p>
+            <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
+                <div id="electron-element" class="md:flex justify-between">
+                  <ul class="px-[15px] pt-[30px] pb-[10px] md:w-[50%] flex flex-col gap-[15px]">
+                    <!-- CHECKBOX -->
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Ödəniş</span>
+                        <div id="checkbox-element" onclick="checkbox(14)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full  duration- peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                      
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Səbət</span>
+                        <div id="checkbox-element" onclick="checkbox(15)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                   
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Məhsullar</span>
+                        <div id="checkbox-element" onclick="checkbox(16)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                  
+                </ul>
+                <ul class="px-[15px] pb-[30px] md:pt-[30px] md:w-[50%] flex flex-col gap-[15px]">
+                    <!-- CHECKBOX -->
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Bəyəndiklərim</span>
+                        <div id="checkbox-element" onclick="checkbox(17)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full  duration- peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                  
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Filtr</span>
+                        <div id="checkbox-element" onclick="checkbox(18)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                    <li  class="relative xl:items-center gap-x-2 flex cursor-pointer justify-between">
+                        <span class="text-sm font-medium text-gray-900">Məhsul Haqqında</span>
+                        <div id="checkbox-element" onclick="checkbox(19)" class="relative duration-500 inline-block w-11 h-6 bg-gray-200 rounded-full peer peer-checked:bg-[#A271F2]">
+                          <div id="checkbox-after" class="absolute top-0.5 left-0.5 w-5 h-5 bg-white border border-gray-300 rounded-full transition-transform duration-300 peer-checked:translate-x-full peer-checked:border-white">
+                            <svg class="w-5 h-5 text-white fill-current hidden peer-checked:block" viewBox="0 0 16 16">
+                              <path d="M6.293 9.293a1 1 0 011.414 0L10 11.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/>
+                            </svg>
+                          </div>
+                        </div>
+                      </li>                    
+                </ul>
+                </div>
+                <div class="flex justify-between items-center mt-4 py-5 px-4 bg-[#4a84bf26]">
+                    <p class="text-[#285a70]">Xərc :</p>
+                    <p id="xerc-three" style="color: rgb(162, 113, 242); " class="sm:text-[22px] font-semibold"> ₼ 0</p>
+                </div>
+          </div>
+          <!-- LAST SECTION -->
+          <!-- LOGO DESIGN -->
+          <p class="text-[#212529] font-medium mt-[40px]">Logo dizaynı</p>
+            <div class="bg-[#f8f8fa] mt-2 rounded-md overflow-hidden">
+                <div class="md:flex justify-between px-[15px] py-[30px]">
+                    <div class="w-[100%]">
+                        <div class="flex justify-between">
+                            <span>Ehtiyyac yoxdur</span>
+                            <span>Sadə</span>
+                            <span>Xüsusi</span>
+                        </div>
+                        <input oninput="logo()"
+                           id="logo-input" class="accent-[#a271f2] w-[100%] appearance-none cursor-pointer rounded-lg bg-gray-200 h-2 "
+                            step="1" min="1" max="3" value="1" type="range">
+                    </div>
+                </div>
+                <div class="flex justify-between items-center mt-4 py-5 px-4 bg-[#4a84bf26]">
+                    <p class="text-[#285a70]">Xərc :</p>
+                    <p id="ramazan" style="color: rgb(162, 113, 242); " class="sm:text-[22px] font-semibold"> ₼ 0</p>
+                </div>
+          </div>
+
+          </div>
+            <!-- CONCLUTION -->
+            <div class=" w-[100%] lg:w-[30vw]">
+              <div class="lmd:w-1/3 w-full h-fit sticky top-0">
+                <div class="flex flex-col gap-4 p-8 w-[100%] bg-white">
+                  <p class="flex flex-row justify-between items-center">
+                    <span class="text-[#8b8b9a]">Statik səhifələr:</span>
+                    <span id="statik-common" style="color: rgb(162, 113, 242);" class="font-bold text-lg"> ₼ 100</span>
+                  </p>
+                  <p class="flex flex-row justify-between items-center">
+                    <span class="text-[#8b8b9a]">Əlavələr:</span>
+                    <span id="addition-common" style="color: rgb(162, 113, 242);" class="font-bold text-lg"> ₼ 0</span>
+                  </p>
+                  <p class="flex flex-row justify-between items-center">
+                    <span class="text-[#8b8b9a]">SEO:</span>
+                    <span id="seo-common" style="color: rgb(162, 113, 242);" class="font-bold text-lg"> ₼ 0</span>
+                  </p>
+                  <p class="flex flex-row justify-between items-center">
+                    <span class="text-[#8b8b9a]">E-ticarət:</span>
+                    <span id="ecommerce-common" style="color: rgb(162, 113, 242);" class="font-bold text-lg"> ₼ 0</span>
+                  </p>
+                  <p class="flex flex-row justify-between items-center">
+                    <span class="text-[#8b8b9a]">Logo dizaynı:</span>
+                    <span id="logo-common" style="color: rgb(162, 113, 242);" class="font-bold text-lg"> ₼ 0</span>
+                  </p>
+                  <hr>
+                  <p class="flex flex-row justify-between items-center gap-4 text-[#8b8b9a] text-base text-right">
+                  <span class="">Qeyd:</span>
+                  <span class="text-base">Minimum sayt qiyməti <span style="color: rgb(162, 113, 242);" class="whitespace-nowrap">₼ 450</span></span>
+                </p>
+              </div>
+                <h3 style="background-color: rgb(162, 113, 242);"  class="  text-white text-2xl p-8 flex flex-row justify-between items-center">
+                <span>Ümumi təxmini dəyəri</span>
+                <span id="common-common" class="font-semibold whitespace-nowrap">₼ 450</span>
+              </h3>
+              <button class="bg-[#2bc48a] w-full text-white font-bold p-4 rounded-md mt-6">Saytınızı İndi Sifariş Edin</button>
+              </div>
+            </div>
+    </main>
+    <footer style="color: rgb(74, 33, 130);" class="bg-[#FAF4FF] w-full mx-auto border-t-[1px] mt-12 border-slate-200 border-solid">
+      <!-- FOOTER -->
+      <div class="px-4 flex-col gap-[30px] lg:flex-row mx-auto max-w-[1296px] flex lg:items-center justify-between lg:gap-[61px] lg:py-20 md:py-10 py-6 p-2">
+        <div class="flex flex-col lmd:w-1/2">
+          <div class="pt-[72px] md:pt-0 flex flex-col gap-8 md:items-start">
+            <a href="index.html" class="-m-1.5 p-1.5"><img src="img/saytaz.svg" alt=""></a>
+            <p style="color: rgb(74, 33, 130)" class="text-base md:text-sm leading-6 max-w-[456px] md:max-h-[130px] mb-10">2004-cü ildən bəri sübut edilmiş təcrübə ilə WebsiteCA hərtərəfli veb xidmətlərinin etibarlı təminatçısıdır. Peşəkar komandamız qlobal bazarda çoxsaylı nailiyyətlər əldə edərək, bizi bütün veb ehtiyaclarınız üçün etibarlı tərəfdaşa çevirdi. Veb sayt və proqramların hazırlanmasından tutmuş domen, hostinq və server satışına qədər biz geniş çeşiddə xidmətlər təklif edirik. Dizayn, SEO, SMM və digər sahələrdə təcrübəmizlə onlayn uğurunuzu təmin edirik. Müstəsna veb həllər üçün WebsiteCA-a etibar edin.</p>
+            <div>
+              <p class="font-bold mb-4">Bizi izləyin :</p>
+            </div>
+            <div id="footer-logo" class="flex space-x-6">
+              <a href="" style="color: rgb(162, 113, 242);" class="hover:text-[#7D3BE2] active:text-[#6829C7]"><svg fill="currentColor" viewBox="0 0 24 24" class="md:h-12 h-8 md:w-12 w-8" aria-hidden="true"><path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd"></path></svg></a>
+              <a href="" style="color: rgb(162, 113, 242);" class="hover:text-[#7D3BE2] active:text-[#6829C7]"><svg fill="currentColor" viewBox="0 0 24 24" class="md:h-12 h-8 md:w-12 w-8" aria-hidden="true"><path fill-rule="evenodd" d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z" clip-rule="evenodd"></path></svg></a>
+              <a href="" style="color: rgb(162, 113, 242);" class="hover:text-[#7D3BE2] active:text-[#6829C7]"><svg fill="currentColor" viewBox="0 0 24 24" class="md:h-12 h-8 md:w-12 w-8" aria-hidden="true"><path d="M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z"></path></svg></a>
+              <a href="" style="color: rgb(162, 113, 242);" class="hover:text-[#7D3BE2] active:text-[#6829C7]"><svg fill="currentColor" viewBox="0 0 24 24" class="md:h-12 h-8 md:w-12 w-8" aria-hidden="true"><path fill-rule="evenodd" d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z" clip-rule="evenodd"></path></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="flex gap-16 lg:w-1/2">
+          <div class="flex-col md:flex-row gap-12 flex lg:gap-[61px] mt-[50px] lg:mt-0">
+            <div>
+              <ul class="mt-[-40px] w-full">
+                <li class="mb-0 md:mb-8 text-[#300B60] font-bold text-2xl uppercase">Hostinq & Domen</li>
+                <li class="text-lg leading-6 font-medium pb-[10px] text-[#4A2182] hover:text-[#7D3BE2]">Domen</li>
+                <li class="text-lg leading-6 font-medium pb-[10px] text-[#4A2182] hover:text-[#7D3BE2]">Veb Hostinq</li>
+                <li class="text-lg leading-6 font-medium pb-[10px] text-[#4A2182] hover:text-[#7D3BE2]">VPS Hostinq</li>
+                <li class="text-lg leading-6 font-medium pb-[10px] text-[#4A2182] hover:text-[#7D3BE2]">Server</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="mt-[-40px] w-full">
+                <li class="mb-0 md:mb-8   text-[#300B60] font-bold text-2xl uppercase">ŞİRKƏT</li>
+                <li class="text-lg leading-6 pb-[10px] font-medium text-[#4A2182] hover:text-[#7D3BE2]">Haqqımızda</li>
+                <li class="text-lg leading-6 pb-[10px] font-medium text-[#4A2182] hover:text-[#7D3BE2]">Əlaqə</li>
+                <li class="text-lg leading-6 pb-[10px] font-medium text-[#4A2182] hover:text-[#7D3BE2]">Bloq</li>
+                <li class="text-lg leading-6 pb-[10px] font-medium text-[#4A2182] hover:text-[#7D3BE2]">Portfolio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+      
+    <script src="script.js"></script>
+</body>
+
+</html>
